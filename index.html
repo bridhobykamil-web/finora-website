@@ -1,0 +1,345 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FINORA adalah aplikasi manajemen keuangan untuk mencatat pemasukan, pengeluaran, dan mengelola keuangan secara lebih terorganisir.">
+  <title>FINORA — Smart Money Management</title>
+  <style>
+    :root {
+      --bg: #0c0a18;
+      --card: #19152c;
+      --purple: #9668ff;
+      --text: #f6f3ff;
+      --muted: #b4accb;
+      --border: #302845;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      background: #100d20;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
+      gap: 20px;
+    }
+
+    .logo {
+      color: var(--purple);
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover { color: white; }
+
+    .hero {
+      padding: 110px 0 100px;
+      text-align: center;
+      background: radial-gradient(
+        ellipse at top,
+        #302052 0%,
+        var(--bg) 65%
+      );
+    }
+
+    .tag {
+      display: inline-block;
+      border: 1px solid #6748a4;
+      border-radius: 30px;
+      padding: 7px 16px;
+      color: #d3bbff;
+      font-size: 13px;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 7vw, 68px);
+      line-height: 1.15;
+      letter-spacing: -2px;
+      margin: 0 auto 22px;
+      max-width: 850px;
+    }
+
+    .accent { color: #aa84ff; }
+
+    .hero p {
+      max-width: 620px;
+      margin: 0 auto 32px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 25px;
+      border-radius: 12px;
+      background: var(--purple);
+      color: #100a20;
+      font-weight: bold;
+      transition: .2s;
+    }
+
+    .button:hover {
+      background: #b69aff;
+      transform: translateY(-2px);
+    }
+
+    section { padding: 80px 0; }
+
+    .section-title {
+      text-align: center;
+      font-size: 34px;
+      margin: 0 0 12px;
+    }
+
+    .section-desc {
+      text-align: center;
+      color: var(--muted);
+      max-width: 650px;
+      margin: 0 auto 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+    }
+
+    .card .emoji { font-size: 32px; }
+
+    .card h3 {
+      margin: 15px 0 8px;
+      font-size: 19px;
+    }
+
+    .card p {
+      color: var(--muted);
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .about {
+      background: #120f22;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .about-content {
+      max-width: 750px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about-content p {
+      color: var(--muted);
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      border-top: 1px solid var(--border);
+      padding: 25px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 750px) {
+      nav { flex-direction: column; }
+      .nav-links { justify-content: center; }
+      .hero { padding: 75px 0; }
+      .grid { grid-template-columns: 1fr; }
+      section { padding: 60px 0; }
+      .section-title { font-size: 28px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav class="container">
+      <a class="logo" href="#">FINORA.</a>
+      <div class="nav-links">
+        <a href="#features">Fitur</a>
+        <a href="#about">Tentang</a>
+        <a href="#contact">Kontak</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="container">
+        <span class="tag">FINORA • Dalam Pengembangan</span>
+
+        <h1>
+          Manage Your Money.<br>
+          <span class="accent">Shape Your Future.</span>
+        </h1>
+
+        <p>
+          FINORA adalah aplikasi manajemen keuangan
+          yang dirancang untuk membantu kamu mencatat
+          pemasukan, pengeluaran, dan mengelola
+          keuangan dengan lebih mudah.
+        </p>
+
+        <a href="#features" class="button">
+          Jelajahi FINORA
+        </a>
+      </div>
+    </div>
+
+    <section id="features" class="container">
+      <h2 class="section-title">Dirancang untuk Keuanganmu</h2>
+      <p class="section-desc">
+        Fitur-fitur yang sedang dikembangkan untuk
+        pengalaman pengelolaan keuangan yang lebih baik.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <div class="emoji">💸</div>
+          <h3>Catatan Transaksi</h3>
+          <p>
+            Catat pemasukan dan pengeluaran
+            secara terorganisir.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="emoji">📊</div>
+          <h3>Dashboard Keuangan</h3>
+          <p>
+            Pantau ringkasan transaksi dan
+            perkembangan keuangan.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="emoji">👥</div>
+          <h3>Multi-Workspace</h3>
+          <p>
+            Kelola keuangan personal dan
+            rencanakan kolaborasi bersama keluarga atau tim.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="emoji">📱</div>
+          <h3>Integrasi WhatsApp</h3>
+          <p>
+            Integrasi pencatatan transaksi melalui
+            WhatsApp sedang direncanakan dan dikembangkan.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="emoji">🔒</div>
+          <h3>Privasi Pengguna</h3>
+          <p>
+            FINORA dirancang dengan pemisahan
+            data antar pengguna dan workspace.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="emoji">✨</div>
+          <h3>Mudah Digunakan</h3>
+          <p>
+            Antarmuka yang sederhana, modern,
+            dan nyaman digunakan.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container about-content">
+        <h2 class="section-title">Tentang FINORA</h2>
+        <p>
+          FINORA adalah proyek aplikasi manajemen
+          keuangan berbasis web yang sedang dikembangkan
+          untuk membantu individu, keluarga, dan tim
+          mengelola aktivitas keuangan.
+        </p>
+        <p>
+          Kami ingin menghadirkan pengelolaan
+          keuangan yang sederhana, terorganisir,
+          dan mudah diakses.
+        </p>
+        <p>
+          FINORA belum diluncurkan untuk penggunaan
+          publik. Informasi fitur dapat berubah
+          selama pengembangan.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact container">
+      <h2 class="section-title">Hubungi FINORA</h2>
+      <p class="section-desc">
+        Untuk informasi tentang pengembangan FINORA,
+        kunjungi profil pengembang kami.
+      </p>
+      <a
+        href="https://github.com/bridhobykamil-web"
+        class="button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Profil Pengembang
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    FINORA © 2026. All rights reserved.<br>
+    Smart Money Management • Under Development
+  </footer>
+
+</body>
+</html>
